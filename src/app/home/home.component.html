@@ -1,0 +1,26 @@
+<div class="container bg-warning">
+  <div class="row">
+    <div class="col">
+      <p>Add items</p>
+    </div>
+    <div class="col">
+      <p>List of items ({{itemCount}})</p>
+    </div>
+  </div>      
+</div>
+<div class="container bg-success">
+  <div class="row">
+    <div class="col">
+      <p class="sm">Item Creation Form</p>
+      <form action="/action_page.php">
+        <div class="form-group">
+          <input type="text" class="form-control" name="item" placeholder="Enter Item Name" [(ngModel)]="itemValue">
+        </div>
+        <input type="submit" class="btn btn-primary" [value]="btnText" (click)="addItem()">
+      </form>
+    </div>
+    <div class="col">
+      <p *ngFor="let item of items">{{item}}</p>
+    </div>
+  </div>      
+</div>
