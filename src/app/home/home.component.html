@@ -20,7 +20,7 @@
       </form>
     </div>
     <div class="col">
-      <p *ngFor="let item of items">{{item}}</p>
+      <p *ngFor="let item of items; let i = index" (click)="removeItem(i)">{{item}}</p>
     </div>
   </div>      
 </div>
