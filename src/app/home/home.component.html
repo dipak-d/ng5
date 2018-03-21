@@ -1,4 +1,4 @@
-<div class="container bg-warning">
+<!-- <div class="bg-warning">
   <div class="row">
     <div class="col">
       <p>Add items</p>
@@ -8,7 +8,7 @@
     </div>
   </div>      
 </div>
-<div class="container bg-success">
+<div class="bg-success">
   <div class="row">
     <div class="col">
       <p class="sm">Item Creation Form</p>
@@ -23,4 +23,26 @@
       <p *ngFor="let item of items; let i = index" (click)="removeItem(i)">{{item}}</p>
     </div>
   </div>      
-</div>
+</div> -->
+<h3 class="first">Car Information</h3>
+<!-- <p-dataTable [value]="cars" [loading]="loading">
+    <p-column field="vin" header="Vin"></p-column>
+    <p-column field="year" header="Year"></p-column>
+    <p-column field="brand" header="Brand"></p-column>
+    <p-column field="color" header="Color"></p-column>
+</p-dataTable> -->
+<p-dataTable [value]="cars" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
+  <p-header>List of Cars</p-header>
+  
+  <p-column field="vin" header="Vin"></p-column>
+  <p-column field="year" header="Year"></p-column>
+  <p-column field="brand" header="Brand"></p-column>
+  <p-column field="color" header="Color"></p-column>
+
+  <ng-template pTemplate="paginatorLeft">
+      <button type="button" pButton icon="fa-refresh"></button>
+  </ng-template>
+  <ng-template pTemplate="paginatorRight">
+      <button type="button" pButton icon="fa-cloud-upload"></button>
+  </ng-template>
+</p-dataTable>
