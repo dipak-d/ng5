@@ -6,25 +6,20 @@ import { Car } from './domain/car';
 @Injectable()
 export class DataService {
 
-  private goals = new BehaviorSubject<any>(['first item','second item', 'third item']);
+  private goals = new BehaviorSubject<any>(['first item', 'second item', 'third item']);
   // private cars = new
   goal = this.goals.asObservable();
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  changeGoal(goal){
+  changeGoal(goal) {
     this.goals.next(goal);
   }
 
-  getCarDetails(){
+  getCarDetails() {
     return this.http.get<any>('assets/data/cars-small.json')
           .toPromise()
           .then(res => <Car[]> res.data)
           .then(data => data);
-
-    // return this.http.get<any>('assets/data/cars-small.json')
-    //       .toPromise()
-    //       .then(res => console.log(res.data))
-    //       .then(data => data);
   }
 }

@@ -11,8 +11,8 @@ import {DataService} from '../data.service';
 export class AboutComponent implements OnInit {
 
   itemId: number;
-  items:any;
-  constructor(private route:ActivatedRoute, private router:Router, private _data:DataService) {
+  items: any;
+  constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
     this.route.params.subscribe(res => this.itemId = res.id);
    }
 
@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
     this._data.goal.subscribe(res => this.items = res);
   }
 
-  sendMeBack(){
+  sendMeBack() {
     this.router.navigate(['']);
   }
 

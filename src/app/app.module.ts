@@ -8,11 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {DataTableModule} from 'primeng/datatable';
-
-
-
-import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
-import {MenuItem} from 'primeng/api';                 //api
+import {AccordionModule} from 'primeng/accordion';     // accordion and accordion tab
+import {MenuItem} from 'primeng/api';                 // api
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';

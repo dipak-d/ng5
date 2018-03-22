@@ -1,36 +1,4 @@
-<!-- <div class="bg-warning">
-  <div class="row">
-    <div class="col">
-      <p>Add items</p>
-    </div>
-    <div class="col">
-      <p>List of items ({{itemCount}})</p>
-    </div>
-  </div>      
-</div>
-<div class="bg-success">
-  <div class="row">
-    <div class="col">
-      <p class="sm">Item Creation Form</p>
-      <form action="/action_page.php">
-        <div class="form-group">
-          <input type="text" class="form-control" name="item" placeholder="Enter Item Name" [(ngModel)]="itemValue">
-        </div>
-        <input type="submit" class="btn btn-primary" [value]="btnText" (click)="addItem()">
-      </form>
-    </div>
-    <div class="col">
-      <p *ngFor="let item of items; let i = index" (click)="removeItem(i)">{{item}}</p>
-    </div>
-  </div>      
-</div> -->
 <h3 class="first">Car Information</h3>
-<!-- <p-dataTable [value]="cars" [loading]="loading">
-    <p-column field="vin" header="Vin"></p-column>
-    <p-column field="year" header="Year"></p-column>
-    <p-column field="brand" header="Brand"></p-column>
-    <p-column field="color" header="Color"></p-column>
-</p-dataTable> -->
 <p-dataTable [value]="cars" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
   <p-header>List of Cars</p-header>
   
