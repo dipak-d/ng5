@@ -4,3 +4,12 @@
 <ul>
   <li *ngFor="let item of items">{{item}}</li>
 </ul>
+<input [value]="name" name="name">
+<input [(ngModel)]="name" name="name">
+
+<p>Name is {{name |custom:"U"}}</p>
+<ngui-map center="18.539388, 73.828949">
+  <marker position="18.539388, 73.828949" 
+  draggable="true">
+  </marker>
+</ngui-map>

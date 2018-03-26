@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   itemCount: number;
   items = [];
   cars: Car[];
+  colorName:string = 'Yellow';
   btnText = 'Add an item';
   itemValue = 'First Item';
   constructor( private _data: DataService) { }

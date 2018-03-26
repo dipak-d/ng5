@@ -1,4 +1,13 @@
 <h3 class="first">Car Information</h3>
+<div class="border">
+  <h4>Pick a highlight color</h4>
+  <div>
+    <input type="radio" name="colors" (click)="colorName='lightgreen'">Green
+    <input type="radio" name="colors" (click)="colorName='yellow'">Yellow
+    <input type="radio" name="colors" (click)="colorName='cyan'">Cyan
+  </div>
+</div>
+<p [appHighlight]="colorName">Highlight me! Diretive</p>
 <p-dataTable [value]="cars" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
   <p-header>List of Cars</p-header>
   

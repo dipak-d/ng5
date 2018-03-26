@@ -14,13 +14,17 @@ import {MenuItem} from 'primeng/api';                 // api
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-
+import { HighlightDirective } from './highlight.directive';
+import { CustomPipe } from './custom.pipe';
+import { NguiMapModule} from '@ngui/map';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    HighlightDirective,
+    CustomPipe
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { AboutComponent } from './about/about.component';
     AccordionModule,
     HttpClientModule,
     DataTableModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCDIrEpF7gkwTyclf0IxaEjAju18sFbWaI'})
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
